@@ -2,7 +2,7 @@ function map(object, fun) {
 	let arr = [];
 	let newObject = {};
 	 if(Array.isArray(object)) {
-	 	for(let i = 0; i < object.length; i++)
+   for(let i = 0; i < object.length; i++)
 	 		arr[i] = fun(object[i]);
 	 	return arr;
 	 } else {
