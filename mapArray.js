@@ -6,6 +6,6 @@ function mapArray(arr, fun) {
 	}
 	return newArr;
 }
-
+ 
 console.log(mapArray([1, 2, 3, 4], (el) => ++el));
 // => [2, 3, 4, 5]

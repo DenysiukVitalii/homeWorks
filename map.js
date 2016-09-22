@@ -11,7 +11,7 @@ function map(object, fun) {
 			return newObject;
 	 }
 }
-
+ 
 console.log(map([1, 2, 3, 4], (el) => ++el));
 // => [2, 3, 4, 5]
 console.log(map({a: 1, b: 2, c: 3}, (el) => ++el));

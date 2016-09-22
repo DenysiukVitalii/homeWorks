@@ -15,7 +15,7 @@ function leftPad2(number, len, num) {
  if ((number + " ").length - 1 >= len) {
    return number;
  }
-  let arr = [];
+ let arr = []; 
   for (let i = 0; i < len - (number + " ").length + 1; i++) {
    if (num === undefined) arr.push(" "); else arr.push(num);
   }
