@@ -1,3 +1,19 @@
+
+function flatten(arr) { 
+if (!arr && !arr.length) return arr; 
+
+let res = []; 
+
+arr.forEach((element) => { 
+res = res.concat((Array.isArray(element)) ? flatten(element) : element) 
+}); 
+
+return res; 
+}
+
+console.log(flatten([1, [2, 3, [3,8]], [4, [5 ,6],7]]));
+// => [1, 2, 3, 4, 5, 6]
+
 /*
 function flatten(arr) { 
 let newArr = []; 
@@ -9,7 +25,7 @@ newArr.push(arr[i][j]);
 } 
 return newArr; 
 } 
-*/
+
 
 function flatten(arr) {
 
@@ -27,6 +43,4 @@ function flatten(arr) {
   recFlatten(arr);
   return newArr;
 }
-
-console.log(flatten([1, [2, 3, [3,8]], [4, [5 ,6],7]]));
-// => [1, 2, 3, 4, 5, 6]
+*/
