@@ -1,11 +1,13 @@
 function leftPad(str, len, sym) {
  if (str.length >= len) {
-        return str;
+  return str;
  }
-  let arr = [];
-   for (let i = 0; i < len - str.length; i++) {
-        if (sym === undefined) arr.push(" "); else arr.push(sym);
-   }
+ 
+ let arr = [];
+   
+  for (let i = 0; i < len - str.length; i++) {
+   if (sym === undefined) arr.push(" "); else arr.push(sym);
+  }
   arr.push(str);
   return arr.join("");
 }
@@ -13,7 +15,7 @@ function leftPad(str, len, sym) {
 
 function leftPad2(number, len, num) {
  if ((number + " ").length - 1 >= len) {
-   return number;
+  return number;
  }
  let arr = []; 
   for (let i = 0; i < len - (number + " ").length + 1; i++) {
