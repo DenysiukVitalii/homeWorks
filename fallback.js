@@ -19,17 +19,16 @@ let fallbackObj = {
 }
 
 function fallback(obj, fallbackO) {
-	for(let key in obj) {
-   if (typeof obj[key] === 'object' && obj[key] !== null) {
-			fallback(obj[key], fallbackO[key]);
-		} else 
-		{
-			if (!obj[key]) {
-				obj[key] = fallbackO[key];
-		} 
-	}
-		
-	}
+ for(let key in obj) {
+  if (typeof obj[key] === 'object' && obj[key] !== null) {
+   fallback(obj[key], fallbackO[key]);
+  } else 
+  {
+    if (!obj[key]) {
+     obj[key] = fallbackO[key];
+    } 
+  }
+ }
 	return obj;
 }
 
