@@ -1,14 +1,13 @@
 
 function flatten(arr) { 
-if (!arr && !arr.length) return arr; 
+ if (!arr && !arr.length) return arr; 
+ let res = []; 
+  
+  arr.forEach((element) => { 
+    res = res.concat((Array.isArray(element)) ? flatten(element) : element) 
+  }); 
 
-let res = []; 
-
-arr.forEach((element) => { 
-res = res.concat((Array.isArray(element)) ? flatten(element) : element) 
-}); 
-
-return res; 
+  return res; 
 }
 
 console.log(flatten([1, [2, 3, [3,8]], [4, [5 ,6],7]]));

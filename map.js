@@ -1,14 +1,14 @@
-function map(ob, fun) {
+function map(object, fun) {
 	let arr = [];
-	let obj = {};
-	 if(Array.isArray(ob)) {
-	 	for(let i = 0; i < ob.length; i++)
-	 		arr[i] = fun(ob[i]);
+	let newObject = {};
+	 if(Array.isArray(object)) {
+	 	for(let i = 0; i < object.length; i++)
+	 		arr[i] = fun(object[i]);
 	 	return arr;
 	 } else {
-	 		for (let key in ob) 
-   			obj[key] = fun(ob[key]);
-			return obj;
+	 		for (let key in object) 
+   			newObject[key] = fun(object[key]);
+			return newObject;
 	 }
 }
 
